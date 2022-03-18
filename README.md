@@ -9,3 +9,11 @@ Things to add:
 
 - p2p
 - Webservice
+
+## To build:
+
+`make`
+
+## To use:
+
+`./a.out <config file>`
