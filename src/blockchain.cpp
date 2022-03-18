@@ -4,10 +4,10 @@
  * @brief Construct a new BC::Blockchain::Blockchain object
  * 
  */
-BC::Blockchain::Blockchain()
+BC::Blockchain::Blockchain(uint32_t diff)
 {
     this->chain.emplace_back(BC::Block(0, "Genesis Block"));
-    this->diff = 4;
+    this->diff = diff;
 }
 
 /**

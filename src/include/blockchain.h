@@ -16,7 +16,7 @@ namespace BC
             BC::Block getLastBlock() const;
 
         public:
-            Blockchain();
+            Blockchain(uint32_t diff);
             void addBlock(BC::Block block);
     };
 }

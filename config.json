@@ -1,0 +1,14 @@
+{
+    "difficulty": 4,
+    "blocks": [
+        {
+            "data": "Test1"
+        },
+        {
+            "data": "Test2"
+        },
+        {
+            "data": "Test3"
+        }
+    ]
+}

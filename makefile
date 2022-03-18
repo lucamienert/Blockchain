@@ -1,7 +1,7 @@
 exec = a.out
 src = $(wildcard src/*.cpp)
 obj = $(src:.cpp=.o)
-flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto
+flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto -ljsoncpp
 
 $(exec): $(obj)
 	g++ $(obj) $(flags) -o $(exec)
