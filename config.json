@@ -1,14 +1,20 @@
 {
-    "difficulty": 4,
-    "blocks": [
-        {
-            "data": "Test1"
+    "configuration": {
+        "difficulty": 4,
+        "serverConfig": {
+            "port": 8000,
+            "maxThreads": 5
         },
-        {
-            "data": "Test2"
-        },
-        {
-            "data": "Test3"
-        }
-    ]
+        "blocks": [
+            {
+                "data": "Test1"
+            },
+            {
+                "data": "Test2"
+            },
+            {
+                "data": "Test3"
+            }
+        ]
+    }
 }
