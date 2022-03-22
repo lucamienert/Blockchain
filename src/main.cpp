@@ -11,9 +11,6 @@
 #include "include/validator.h"
 #include "include/server.h"
 
-#define PORT 8080
-#define THREADS 5
-
 int main(int argc, char **argv)
 {
     if(argc < 2)
@@ -29,19 +26,19 @@ int main(int argc, char **argv)
     std::ifstream config_file(argv[1]);
     config_file >> config;
     
-    int size = config["blocks"].size();
-    uint32_t difficulty = config["difficulty"].asUInt();
+    int size = config["configuration"]["blocks"].size();
+    uint32_t difficulty = config["configuration"]["difficulty"].asUInt();
 
     BC::Blockchain chain(difficulty);
 
     for(int i = 0; i < size; ++i) 
     {
         #ifdef DEBUG
-        std::cout << "Mining Block with data: " << config["blocks"][i]["data"].asString() << std::endl;
+        std::cout << "Mining Block with data: " << config["configuration"]["blocks"][i]["data"].asString() << std::endl;
         #endif
 
-        chain.addBlock(BC::Block(i, config["blocks"][i]["data"].asString()));
+        chain.addBlock(BC::Block(i, config["configuration"]["blocks"][i]["data"].asString()));
     }
 
-    BC::Server s(PORT, THREADS);
+    BC::Server s(["configuration"]["serverConfig"]["port"].asInt(), ["configuration"]["serverConfig"]["threads"].asInt());
 }
