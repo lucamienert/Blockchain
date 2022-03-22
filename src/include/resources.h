@@ -1,6 +1,7 @@
 #pragma once
 
 #include <httpserver.hpp>
+#include <memory>
 
 namespace BC
 {
