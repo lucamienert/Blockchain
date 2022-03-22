@@ -1,4 +1,4 @@
-exec = a.out
+exec = blockchain.out
 src = $(wildcard src/*.cpp)
 obj = $(src:.cpp=.o)
 flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto -ljsoncpp
