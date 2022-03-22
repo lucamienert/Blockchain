@@ -1,6 +1,9 @@
 #include "include/server.h"
 
-BC::Server(int port, int threads)
+/**
+ * @brief Construct a new BC::Server::Server object
+ */
+BC::Server::Server(int port, int threads)
 {
 	this->ws = httpserver::create_webserver(port)
         .start_method(httpserver::http::http_utils::INTERNAL_SELECT)
