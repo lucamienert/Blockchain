@@ -16,4 +16,4 @@ Things to add:
 
 ## To use:
 
-`./a.out <config file>`
+`./blockchain.out <config file>`
