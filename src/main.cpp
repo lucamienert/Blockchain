@@ -41,4 +41,6 @@ int main(int argc, char **argv)
     }
 
     BC::Server s(["configuration"]["serverConfig"]["port"].asInt(), ["configuration"]["serverConfig"]["threads"].asInt());
+
+    s.startServer();
 }
