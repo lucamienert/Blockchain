@@ -9,10 +9,13 @@
 #include "include/block.h"
 #include "include/blockchain.h"
 #include "include/validator.h"
+#include "include/server.h"
+
+#define PORT 8080
+#define THREADS 5
 
 int main(int argc, char **argv)
 {
-
     if(argc < 2)
     {
         #ifdef DEBUG
@@ -39,4 +42,6 @@ int main(int argc, char **argv)
 
         chain.addBlock(BC::Block(i, config["blocks"][i]["data"].asString()));
     }
+
+    BC::Server s(PORT, THREADS);
 }
