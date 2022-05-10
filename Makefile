@@ -1,5 +1,5 @@
 exec = blockchain.out
-src = $(wildcard src/*.cpp)
+src = $(wildcard src/*.cpp src/server/*.cpp)
 obj = $(src:.cpp=.o)
 flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto -ljsoncpp
 
