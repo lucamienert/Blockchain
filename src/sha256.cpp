@@ -1,4 +1,4 @@
-#include "include/sha256.h"
+#include <sha256.h>
 
 /**
  * @brief Basic implementation of the sha256 Algorithm with the OpenSSL Library

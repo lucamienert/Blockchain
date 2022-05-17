@@ -6,10 +6,10 @@
 #include <json/value.h>
 #include <json/json.h>
 
-#include "include/block.h"
-#include "include/blockchain.h"
-#include "include/validator.h"
-#include "include/server.h"
+#include <block.h>
+#include <blockchain.h>
+#include <validator.h>
+#include <server/server.h>
 
 int main(int argc, char **argv)
 {
