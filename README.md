@@ -9,7 +9,7 @@ Just trying to create an simple Blockchain from scratch with C++
 Things to add:
 
 - p2p
-- Webservice (need to add Routes and functions)
+- Webservice
 
 ## To build:
 
