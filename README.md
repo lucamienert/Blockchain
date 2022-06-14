@@ -6,11 +6,6 @@ Just trying to create an simple Blockchain from scratch with C++
 - Using JSONCpp for config file
 - Using LibHTTPServer as the Webserice
 
-Things to add:
-
-- p2p
-- Webservice
-
 ## To build:
 
 ```bash
