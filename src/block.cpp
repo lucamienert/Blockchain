@@ -6,8 +6,7 @@
  * @param index 
  * @param data 
  */
-BC::Block::Block(uint32_t index, const std::string &data)
-    : index(index), data(data)
+BC::Block::Block(uint32_t index, const std::string &data) : index(index), data(data)
 {
     this->nonce = 0;
     this->time = std::time(nullptr);
@@ -35,6 +34,7 @@ inline std::string BC::Block::calculateHash() const
 void BC::Block::mine(uint32_t diff)
 {
     char str[diff + 1];
+
     for(uint32_t i = 0; i < diff; ++i)
         str[i] = '0';
 
@@ -46,7 +46,8 @@ void BC::Block::mine(uint32_t diff)
     {
         this->nonce++;
         this->hash = calculateHash();
-    } while(this->hash.substr(0, diff) != cppString);
+    } 
+    while(this->hash.substr(0, diff) != cppString);
 
     std::cout << this->hash << std::endl;
 }

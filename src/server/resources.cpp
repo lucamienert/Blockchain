@@ -1,4 +1,4 @@
-#include "../include/resources.h"
+#include <server/resources.h>
 
 /**
  * @brief Initialising Resource

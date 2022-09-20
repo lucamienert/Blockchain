@@ -1,4 +1,4 @@
-#include "../include/server.h"
+#include <server/server.h>
 
 /**
  * @brief Construct a new BC::Server::Server object
