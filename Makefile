@@ -1,7 +1,7 @@
 exec = blockchain.out
 src = $(wildcard src/*.cpp src/server/*.cpp)
 obj = $(src:.cpp=.o)
-flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto -ljsoncpp -I./src/include
+flags = -g -Wall -lm -ldl -fPIC -rdynamic -lssl -lcrypto -ljsoncpp -Iinclude
 
 $(exec): $(obj)
 	g++ $(obj) $(flags) -o $(exec)
@@ -14,4 +14,4 @@ clean:
 	-rm src/*.o
 
 lint:
-	clang-tidy src/*.cpp src/include/*.h include/server/*.h
+	clang-tidy src/*.cpp src/server/*.cpp include/*.h include/server/*.h
